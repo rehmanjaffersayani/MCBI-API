@@ -1,3 +1,5 @@
+//db connection
+
 var Connection = require('tedious').Connection;
 var config = {
     server: 'localhost',
