@@ -61,7 +61,7 @@ function UsersRepository(dbContext) {
         
 
         dbContext.post("INSERT INTO users (userName, emailAddress, userPass) VALUES (@userName, @emailAddress, @userPass)", parameters, function (error, data) {
-           
+          
             if (error){
                 if(error.number== 2627){
 
@@ -71,7 +71,7 @@ function UsersRepository(dbContext) {
                     });
                 }else{
                     return res.status(500).json({
-                        message: 'An error occurred. Please try again later',
+                        message: 'An error occurred. Please try again later.',
                         status:false
                     });
                 }
